@@ -52,10 +52,18 @@ int main () {
 	}
 
 	if ( chosen.number == prize.number && chosen.suit == prize.suit)
+	{
 		cout << "That's right ! You win!!\n";
-	else
+	}
+	else if ( chosen.number != prize.number && chosen.suit != prize.suit && position < 4 )
+	{
 		cout << "Sorry. You Lost\n";
-
+	}
+	else 
+	{
+		cout << "Wrong Number, Enter 1 , 2 , 3 ";
+		cin >> position;
+	}
 
 	return 0;
 }
