@@ -1,20 +1,31 @@
 #include <iostream>
 using namespace std;
 
-void foo();
+void getavg( float );
 
 int main()
 	{
-	foo();
-	foo();
-	foo();
+	float data = 1, avg;
+
+	while ( data != 0 )
+		{
+		cout << "Enter a number : ";
+		cin >> data;
+		getavg(data);
+		}
 
 	return 0;
 	}
 
-void foo()
+void getavg( float newdata )
 	{
-	static int x = 0;
-	x++;
-	cout << "x = " << x << endl;
-	}
+	static float total = 0;
+	static int count = 0;
+
+	// ^^^ static variables are initialized only --> once per program
+
+	count++;
+	total += newdata;
+	
+	cout << "Total = " << total << " , count = " << count << endl;
+}
