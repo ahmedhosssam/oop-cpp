@@ -18,7 +18,7 @@ CLASSES :
 
 		setType( string newType ) { type = newType }
 
-
+-------------------------------------------------------------------------
 2. Contact:
 
 	private:
@@ -39,6 +39,7 @@ CLASSES :
 
 		getInfo(); // all the contact information
 
+-------------------------------------------------------------------------
 
 3. ContactBook:
 
