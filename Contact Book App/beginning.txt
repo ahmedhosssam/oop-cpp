@@ -1,0 +1,45 @@
+CLASSES :
+
+1. PhoneNumber:
+
+	private:
+		string number; // 01015556666
+		string type; // e.g. home, work, mobile
+
+	public:
+		constructor :
+		PhoneNumber(number , type) : ....
+
+		getPhone() { return number }
+
+		getType() { return type }
+
+		setPhone( string newNumber ) { number = newNumber }
+
+		setType( string newType ) { type = newType }
+
+
+2. Contact:
+
+	private:
+		id;
+		name;
+		gender;
+		email;
+	public:
+		
+		constructor :
+		PhoneNumber(name , gender, city, email) : ....
+		
+		setName();
+
+		setGender();
+
+		setEmail();
+
+		getInfo(); // all the contact information
+
+
+3. ContactBook:
+
+	private
