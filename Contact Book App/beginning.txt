@@ -8,15 +8,15 @@ CLASSES :
 
 	public:
 		constructor :
-		PhoneNumber(number , type) : ....
+		PhoneNumber(number , type) --> DONE
 
-		getPhone() { return number }
+		getPhone() { return number } --> DONE
 
-		getType() { return type }
+		getType() { return type } --> DONE
 
-		setPhone( string newNumber ) { number = newNumber }
+		setPhone( string newNumber ) { number = newNumber } --> DONE
 
-		setType( string newType ) { type = newType }
+		setType( string newType ) { type = newType } --> DONE
 
 -------------------------------------------------------------------------
 2. Contact:
