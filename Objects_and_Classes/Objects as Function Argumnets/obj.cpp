@@ -22,12 +22,12 @@ class Distance
 		{
 			cout << feet << "\'" << inches << '\"' << endl;
 		}
-		void add_dist( Distance , Distance );   // declaration ??????
+		void add_dist( Distance , Distance ); // Decalration
 };
 
-void Distance::add_dist( Distance d2 , Distance d3 ) // the args are " objects "
+void Distance::add_dist( Distance first , Distance second ) // the args are " objects "
 {
-	inches = d2.inches + d3.inches;
+	inches = first.inches + second.inches;
 	feet = 0;
 
 	if (inches >= 12.0)
@@ -35,7 +35,7 @@ void Distance::add_dist( Distance d2 , Distance d3 ) // the args are " objects "
 		inches -= 12.0;
 		feet++;
 		}
-	feet += d2.feet + d3.feet;
+	feet += first.feet + second.feet;
 }
 
 int main()
