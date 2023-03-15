@@ -18,6 +18,8 @@ class ContactBook {
     static Contact arr[];
     ContactBook();
     void getOptions();
+    void displayContacts();
+    void clearScreen();
 };
 
 
