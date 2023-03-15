@@ -3,13 +3,11 @@
 #include "Contact.h"
 #include <iostream>
 #include <string>
-#include <ncurses.h>
 
 using namespace std;
 
 // Constructor
 ContactBook::ContactBook() {
-      contactNum = Contact::currentContact;
       getOptions();
     }
 
@@ -37,6 +35,7 @@ void ContactBook::getOptions() {
     clearScreen();
     break;
   default:
+    clearScreen();
     break;
   }
 }
