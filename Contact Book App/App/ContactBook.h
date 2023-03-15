@@ -20,6 +20,7 @@ class ContactBook {
     void getOptions();
     void displayContacts();
     void clearScreen();
+    void addNewContact();
 };
 
 
