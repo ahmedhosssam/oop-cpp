@@ -16,8 +16,7 @@ int main()
   Contact andrew("Andrew", "Male", "andrew@gmail.com", testNum);
 
   ContactBook book;
-
-  andrew.getInfo();
+  book.getOptions();
 
   return 0;
 }

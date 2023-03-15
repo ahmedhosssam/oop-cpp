@@ -41,6 +41,16 @@ CLASSES :
 
 -------------------------------------------------------------------------
 
-3. ContactBook:
+3. ContactBook: 
 
 	private
+
+
+	functions :
+
+	getOptions() --> To show the main options :
+					* Add a contact
+					* Display all contacts
+					* Exit the program
+
+------------------------------------------------------------------------

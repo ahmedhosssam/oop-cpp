@@ -16,6 +16,7 @@ class ContactBook {
  public:
     static Contact arr[];
     ContactBook();
+    void getOptions();
 };
 
 
