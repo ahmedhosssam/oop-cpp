@@ -12,12 +12,14 @@ class PhoneNumber {
     string type;
 
   public:
+    PhoneNumber();
     PhoneNumber( string num, string type );
     string getPhone();
     string getType(); 
     
     void setPhone( string newPhone );
     void setType( string newType );
+    
 };
 
 #endif

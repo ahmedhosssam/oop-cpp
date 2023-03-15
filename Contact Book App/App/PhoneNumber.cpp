@@ -4,6 +4,8 @@
 
 using namespace std;
 
+PhoneNumber::PhoneNumber() {}
+
 PhoneNumber::PhoneNumber( string num, string type ) : num(num) , type(type) {
   this->num = num;
   this->type = type;
