@@ -15,9 +15,9 @@ class Contact {
     string email;
     PhoneNumber number;
 
-    static int currentContact;
 
   public:
+    static int currentContact;
     Contact(string name, string gender, string email, PhoneNumber number);
 
     void setName( string newName );

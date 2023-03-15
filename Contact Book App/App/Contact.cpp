@@ -13,6 +13,7 @@ Contact::Contact(string name, string gender, string email, PhoneNumber number) :
   this->number = number;
 
   currentContact++;
+  // ContactBook::arr[]
 }
 
 int Contact::currentContact = 0;
