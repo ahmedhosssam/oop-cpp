@@ -1,5 +1,6 @@
 #include "PhoneNumber.h"
 #include "Contact.h"
+#include "ContactBook.h"
 #include <iostream>
 #include <string>
 
@@ -12,8 +13,11 @@ Contact::Contact(string name, string gender, string email, PhoneNumber number) :
   this->email = email;
   this->number = number;
 
+  // cout << ContactBook::arr << endl;
+  // cout << currentContact << endl;
+  cout << this << endl;
+  ContactBook::arr[currentContact] = *this;
   currentContact++;
-  // ContactBook::arr[]
 }
 
 int Contact::currentContact = 0;
