@@ -12,6 +12,7 @@ class ContactBook {
   private:
     static Contact contactArray[];
     int contactNum;
+    int option;
 
  public:
     static Contact arr[];
