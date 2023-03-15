@@ -32,7 +32,6 @@ void ContactBook::getOptions() {
     printw("-> Option 1\n");
     printw("   Option 2\n");
     printw("   Option 3\n");
-    // printw("   Option 4\n");
     refresh();
 
     // Wait for user input
@@ -57,7 +56,7 @@ void ContactBook::getOptions() {
 
         // If the user presses enter, break the loop and return the selected option
         if (c == 10) {
-            cout << "You entered : " << selectedOption;
+            cout << "You entered : " << selectedOption << endl;
             break;
         }
 
