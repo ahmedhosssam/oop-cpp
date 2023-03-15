@@ -11,13 +11,22 @@ Contact::Contact(string name, string gender, string email, PhoneNumber number) :
   this->gender = gender;
   this->email = email;
   this->number = number;
+
+  currentContact++;
+  // contactsArray[numContacts] = *this;
+
+  // numContacts++;
 }
+
+int Contact::currentContact = 0;
 
 void Contact::setName( string newName ) { name = newName; }
 
 void Contact::setGender( string newGender ) { gender = newGender; }
 
 void Contact::setEmail( string newEmail ) { email = newEmail; }
+
+void Contact::getCount() { cout << "Count : " << currentContact; }
 
 void Contact::getInfo()
 {

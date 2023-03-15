@@ -15,6 +15,8 @@ class Contact {
     string email;
     PhoneNumber number;
 
+    static int currentContact;
+
   public:
     Contact(string name, string gender, string email, PhoneNumber number);
 
@@ -25,6 +27,8 @@ class Contact {
     void setEmail( string newEmail );
 
     void getInfo();
+
+    void getCount();
 };
 
 #endif
