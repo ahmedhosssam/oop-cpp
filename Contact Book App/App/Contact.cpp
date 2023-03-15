@@ -13,9 +13,6 @@ Contact::Contact(string name, string gender, string email, PhoneNumber number) :
   this->number = number;
 
   currentContact++;
-  // contactsArray[numContacts] = *this;
-
-  // numContacts++;
 }
 
 int Contact::currentContact = 0;
