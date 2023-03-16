@@ -72,7 +72,6 @@ void ContactBook::addNewContact() {
   PhoneNumber newPhone(phoneNumber, "Mobile");
   Contact newContact(contactName ,gender, email, newPhone);
 
-  cout << Contact::currentContact << endl;
   cout << "<<------------------------------>>\n\n" << endl;
   getOptions();
 }
