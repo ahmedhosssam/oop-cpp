@@ -13,7 +13,7 @@ class ContactBook {
     int option; // to choose one of the options e.g. --> display contacts & add contact
 
  public:
-    static Contact arr[];
+    static Contact arr[]; // contains all contact objects that was created by "Contact" class
     ContactBook();
     void getOptions(); // display all options to user
     void displayContacts();

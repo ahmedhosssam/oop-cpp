@@ -61,10 +61,13 @@ void ContactBook::addNewContact() {
 
   clearScreen();
 
-  cout << "Contact Name : "; cin >> contactName;
-  cout << "\nPhone Number : "; cin >> phoneNumber;
+  cout << "Contact Name : ";
+  cin.ignore(1, '\n');
+  std::getline(cin, contactName);
+
   cout << "\nEmail : "; cin >> email;
   cout << "\nGender : "; cin >> gender;
+  cout << "\nPhone Number : "; cin >> phoneNumber;
 
   PhoneNumber newPhone(phoneNumber, "Mobile");
   Contact newContact(contactName ,gender, email, newPhone);
