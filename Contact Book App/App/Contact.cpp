@@ -16,7 +16,9 @@ Contact::Contact(string name, string gender, string email, PhoneNumber number) :
   // cout << ContactBook::arr << endl;
   // cout << currentContact << endl;
   // cout << this << endl;
-  ContactBook::arr[currentContact] = *this;
+
+  // add all Contacts addresses to contact book array
+  ContactBook::arr[currentContact] = *this; 
   currentContact++;
 }
 

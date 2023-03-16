@@ -40,7 +40,7 @@ void ContactBook::getOptions() {
   }
 }
 
-
+// display all contacts in --> Contact ContactBook::arr[]
 void ContactBook::displayContacts() {
   clearScreen();
 
@@ -48,10 +48,11 @@ void ContactBook::displayContacts() {
     cout << "------------------------------" << endl;
     arr[i].getInfo() ;
   }
-    cout << "<<------------------------------>>\n\n" << endl;
+  cout << "<<------------------------------>>\n\n" << endl;
   getOptions();
 }
 
+// create new objects from "Contact" class
 void ContactBook::addNewContact() {
   string contactName;
   string gender;
@@ -65,7 +66,6 @@ void ContactBook::addNewContact() {
   cout << "\nEmail : "; cin >> email;
   cout << "\nGender : "; cin >> gender;
 
-  // Contact ahmed("Ahmed Hossam", "Male", "hoss4614@gmail.com", testNum);
   PhoneNumber newPhone(phoneNumber, "Mobile");
   Contact newContact(contactName ,gender, email, newPhone);
 

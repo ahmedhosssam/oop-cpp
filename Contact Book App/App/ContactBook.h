@@ -10,17 +10,15 @@ using namespace std;
 
 class ContactBook {
   private:
-    static Contact contactArray[];
-    int contactNum;
-    int option;
+    int option; // to choose one of the options e.g. --> display contacts & add contact
 
  public:
     static Contact arr[];
     ContactBook();
-    void getOptions();
+    void getOptions(); // display all options to user
     void displayContacts();
     void clearScreen();
-    void addNewContact();
+    void addNewContact(); // create new objects from "Contact" class
 };
 
 
