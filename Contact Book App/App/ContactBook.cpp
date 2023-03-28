@@ -15,7 +15,9 @@ void ContactBook::clearScreen() {
   system("cls"); // clear the screen for windows
   system("clear"); // clear the screen for linux/MacOS
 }
+
 void ContactBook::getOptions() {
+  clearScreen();
   cout << "Choose one of the following options :\n";
   cout << "1- Add a new contact\n"; 
   cout << "2- Display all contacts\n";
