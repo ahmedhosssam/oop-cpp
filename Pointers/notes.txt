@@ -1,0 +1,23 @@
+So , What is Pointers ?
+--> A Pointer is a variable that store an address of another variable
+
+int a;
+int *P;
+
+P = &a;  // make the pointer P points to the variable "a"
+
+a = 5;
+
+print P;  // address of a
+
+print &a;  // address of a
+
+print &P;  // address of P ( not equal to the adress of a )
+
+print *P;   // 5 <-- " DEREFERENCING "
+
+*P = 8;		// modify the value of the variable a
+
+print a;    // 8
+
+
