@@ -5,31 +5,22 @@ using namespace std;
 
 int main()
 {
-	int a;
-	int *p;
 
-	a = 10;
-	
-	p = &a;
+	// Pointers to Pointers :
 
-	cout << "a = " << a << " , 10"  << endl; // 10
-	cout << "&a = " << &a <<" , address of a" << endl; // address of a
-	cout << "p = " << p << " , address of a"  << endl; // adress of a
-	cout << "*p = " << *p << " , 10 ( value of a) " << endl; 
-	cout << "&p = " << &p << " , adress of p" << endl;
+	int x = 5;
+	int *p = &x;
+	*p = 6;
 
-	int b = 20;
-	*p = b; // still points to a , so it now changed the value of a to 20
+	int **q = &p;
+	int ***r = &q;
 
-	cout << "&b = " << &b << endl;
-	cout << "p = " << p << endl;
-	cout << "*p = " << *p << endl;
-	cout << "a = " << a << endl; // changed to 20
-
-	// pointer arithmetic
-	// printf("Address of p is %d\n",p);
-	
-	printf("a = %d\n",a);
+	cout << *p << endl; // 6
+	cout << **q << endl; // 6
+	cout << ***r << endl; // 6
+	cout << *q << endl; // address of p
+	cout << *r << endl; // address of q
+	cout << **r << endl; // address of p
 
 	return 0;
 }
