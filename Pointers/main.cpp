@@ -1,26 +1,20 @@
 #include <iostream>
-#include <stdio.h>
 
 using namespace std;
 
+void Increment( int *x )
+{
+	*x = *x + 1;
+	cout << "Address of a in increment : " << x << endl; // x now is an address
+}
+
 int main()
 {
+	int a = 10;
+	Increment(&a);
 
-	// Pointers to Pointers :
-
-	int x = 5;
-	int *p = &x;
-	*p = 6;
-
-	int **q = &p;
-	int ***r = &q;
-
-	cout << *p << endl; // 6
-	cout << **q << endl; // 6
-	cout << ***r << endl; // 6
-	cout << *q << endl; // address of p
-	cout << *r << endl; // address of q
-	cout << **r << endl; // address of p
-
+	cout << "a = " << a << endl; // still 10
+	cout << "Address of a in increment : " << &a << endl;
+	
 	return 0;
 }
