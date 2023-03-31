@@ -20,4 +20,61 @@ print *P;   // 5 <-- " DEREFERENCING "
 
 print a;    // 8
 
+----------------------------------
 
+What is heap ?
+
+	- A Heap is a region of memory that is dynamically allocated at runtime to store data .
+	
+	- It's known as " Dynamic memory allocation area "
+
+	- To allocate memory for a data or variable we use:
+		= malloc() <-- C
+		= new <-- C++
+
+	- Steps to dynamically allocate memory in heap :
+		1. We Allocate the memory for anything using --> new
+		2. We Deallocate the memory using --> delete ( When no longer need )
+
+	- It's not an implementation of heap data structure
+
+
+Dynamic Memory in C++ :
+( new - delete )
+
+
+----------------------------------
+
+Dynamic Memory in C :
+
+( malloc - calloc - realloc - free )
+
+int main ()
+{
+	int a; // goes on stack
+	int *p;
+	p = (int*)malloc( sizeof( int ) ); // we now allocate a memory in the heap
+
+	/*
+		malloc function :
+			- Asks for " how much memory to allocate on the heap ? ( in bites ) "
+			- It returns a void pointer
+	*/
+
+	*p = 10; // now a equals 10 in the heap
+	
+	free(p);	// it deletes the allocated memory of p from heap
+
+	p = (int*)malloc( sizeof( int ) ); // we now allocate "another" memory in the heap
+
+	*p = 20;
+
+	free(p);
+	
+	p = (int*)malloc( 20 * sizeof(int) );	// it allocates a block of 20*4 bites in memory of type int
+
+	free(p);
+
+	/* if no free memory in heap .. p will return NULL
+	   so we have to handle this error */
+}
