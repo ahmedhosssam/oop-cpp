@@ -11,8 +11,9 @@ using namespace std;
 
 int main()
 {
-  Employee e("Ahmed Hossam", "010696969", "ahmed@gmail.com", "CEO");
-  e.getDetails();
+  Employee* ahmed = new HourlyEmployee;
+  ahmed->setDetails();
+  ahmed->getDetails();
 
   return 0;
 }

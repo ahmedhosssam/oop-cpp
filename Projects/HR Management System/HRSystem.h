@@ -1,5 +1,5 @@
-#ifndef DEPARTMENT_H
-#define DEPARTMENT_H
+#ifndef HRSYSTEM_H
+#define HRSTSTEM_H
 
 #include <iostream>
 #include <string>
