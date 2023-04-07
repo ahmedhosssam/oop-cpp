@@ -4,22 +4,16 @@
 #include <iostream>
 #include <string>
 
-#include "Employee.h"
-
 using namespace std;
 
-class HRSystem
+class Department
 {
   private:
-    Employee EmployeeList;
+    int departID;
+    string departName;
 
   public:
-    void CalcTotalPayroll();
-    void addEmployee();
-    void editEmployee();
-    void delEmployee();
-    void FineEmployee();
-    void ShowAll();
+    void Print(); // display information of the department
 };
 
 #endif

@@ -1,5 +1,8 @@
 #include <iostream>
 
+#include "Employee.h"
+#include "HRSystem.h"
+
 using namespace std;
 
 int main()
