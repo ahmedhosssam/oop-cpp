@@ -16,7 +16,7 @@ class Employee {
   
   public:
     void getDetails(); // display employee data to user
-    double virtual getSalary();
+    virtual void getSalary();
     double calculatePay();
 
 };
