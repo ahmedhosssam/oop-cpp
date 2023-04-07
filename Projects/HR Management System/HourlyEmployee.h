@@ -8,7 +8,8 @@
 
 using namespace std;
 
-class HourlyEmployee : public Employee {
+class HourlyEmployee : public Employee
+{
   private:
     double hoursWork; // how many hours did he work
     double rate; // rate per hour ( e.g. 25$/hr )

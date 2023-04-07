@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-  Employee* ahmed = new HourlyEmployee;
+  Employee* ahmed = new SalariedEmployee;
   ahmed->setDetails();
   ahmed->getDetails();
 

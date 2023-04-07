@@ -10,10 +10,11 @@ using namespace std;
 class SalariedEmployee : public Employee
 {
   public:
-    int salary;
-
+    double salary;
+    SalariedEmployee(); // constructor
     void getSalary();
     void getDetails();
+    void setDetails();
 };
 
 #endif
