@@ -4,12 +4,15 @@
 #include "Employee.h"
 #include "HRSystem.h"
 #include "HourlyEmployee.h"
+#include "Department.h"
+#include "SalariedEmployee.h"
 
 using namespace std;
 
 int main()
 {
-  cout << "Hello Again in a new project!" << endl;
+  Employee e("Ahmed Hossam", "010696969", "ahmed@gmail.com", "CEO");
+  e.getDetails();
 
   return 0;
 }

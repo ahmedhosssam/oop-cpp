@@ -8,16 +8,17 @@ using namespace std;
 
 class Employee {
   protected:
-    int employeeID;
+    static int employeeID;
     string name;
     string phone;
     string email;
     string jobTitle;
   
   public:
+    Employee( string name, string phone, string email, string jobTitle); // Constructor
     void getDetails(); // display employee data to user
     virtual void getSalary();
-    double calculatePay();
+    // double calculatePay();
 
 };
 
