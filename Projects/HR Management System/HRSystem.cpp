@@ -26,7 +26,6 @@ HRSystem::HRSystem()
 
 HRSystem::~HRSystem()
 {
-  //delete[] EmployeeList;
 }
 
 void HRSystem::getOptions()
@@ -175,11 +174,14 @@ void HRSystem::deleteEmployee()
     deleteEmployee();
   }
 
-  int j = 0;
   for( int i = deleteID ; i < countEmployees ; i++ )
   {
     EmployeeList[i] = EmployeeList[i+1];
   }
 
   countEmployees--;
+
+  cout << "\nDONE !\n";
+  std::this_thread::sleep_for(std::chrono::seconds(1)); // wait for 1 seconds
+  clearScreen();
 }

@@ -20,7 +20,9 @@ void Employee::setDetails()
 
   cout << "Phone : "; cin >> phone;
   cout << "Email : "; cin >> email;
-  cout << "Job Title : "; cin >> jobTitle;
+  cout << "Job Title : ";
+  cin.ignore(1, '\n');
+  std::getline(cin, jobTitle);
 }
 
 void Employee::getDetails()
