@@ -15,9 +15,5 @@ int main()
 
   HRSystem hr1;
 
- /* Employee* ahmed = new HourlyEmployee;
-  ahmed->setDetails();
-  ahmed->getDetails();*/
-
   return 0;
 }
