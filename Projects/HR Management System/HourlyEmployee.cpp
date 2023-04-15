@@ -14,8 +14,8 @@ HourlyEmployee::HourlyEmployee()
 void HourlyEmployee::getDetails()
 {
   Employee::getDetails();
-  cout << "Hours Work : " << hoursWork << endl;
-  cout << "Rate : " << rate << endl;
+  cout << "Working Hours : " << hoursWork << " Hours " << endl;
+  cout << "Rate : " << rate << " $/hr" << endl;
   cout << "Total Earning : $" << salary << endl;
 }
 
@@ -23,7 +23,7 @@ void HourlyEmployee::setDetails()
 {
   cin.ignore(1, '\n');
   Employee::setDetails();
-  cout << "Hours Work : "; cin >> hoursWork;
+  cout << "Working Hours : "; cin >> hoursWork;
   cout << "Rate : "; cin >> rate;
   calculatePay();
 }
