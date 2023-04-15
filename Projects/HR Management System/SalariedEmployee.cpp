@@ -6,7 +6,10 @@
 
 using namespace std;
 
-SalariedEmployee::SalariedEmployee() {}
+SalariedEmployee::SalariedEmployee()
+{
+  SalariedEmployee::setDetails();
+}
 
 double SalariedEmployee::getSalary() { return salary; }
 
@@ -18,6 +21,7 @@ void SalariedEmployee::getDetails()
 
 void SalariedEmployee::setDetails()
 {
+  cin.ignore(1, '\n');
   Employee::setDetails();
   cout << "Salary : $"; cin >> salary;
 }

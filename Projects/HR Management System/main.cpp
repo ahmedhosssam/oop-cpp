@@ -12,9 +12,12 @@ using namespace std;
 
 int main()
 {
-  Employee* ahmed = new HourlyEmployee;
+
+  HRSystem hr1;
+
+ /* Employee* ahmed = new HourlyEmployee;
   ahmed->setDetails();
-  ahmed->getDetails();
+  ahmed->getDetails();*/
 
   return 0;
 }

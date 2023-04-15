@@ -6,7 +6,10 @@
 
 using namespace std;
 
-HourlyEmployee::HourlyEmployee() {}
+HourlyEmployee::HourlyEmployee()
+{
+  HourlyEmployee::setDetails();
+}
 
 void HourlyEmployee::getDetails()
 {
@@ -18,6 +21,7 @@ void HourlyEmployee::getDetails()
 
 void HourlyEmployee::setDetails()
 {
+  cin.ignore(1, '\n');
   Employee::setDetails();
   cout << "Hours Work : "; cin >> hoursWork;
   cout << "Rate : "; cin >> rate;
