@@ -13,12 +13,20 @@ void HourlyEmployee::getDetails()
   Employee::getDetails();
   cout << "Hours Work : " << hoursWork << endl;
   cout << "Rate : " << rate << endl;
+  cout << "Total Earning : $" << salary << endl;
 }
 
-void HourlyEmployee::setDetails() {
+void HourlyEmployee::setDetails()
+{
   Employee::setDetails();
   cout << "Hours Work : "; cin >> hoursWork;
   cout << "Rate : "; cin >> rate;
+  calculatePay();
 }
 
-void HourlyEmployee::getSalary() {}
+double HourlyEmployee::getSalary() { return salary; }
+
+void HourlyEmployee::addHours( double moreHours ) { hoursWork += moreHours; }
+
+void HourlyEmployee::calculatePay()
+{ salary = rate * hoursWork; }

@@ -14,13 +14,14 @@ class Employee
     string phone;
     string email;
     string jobTitle;
+    double salary;
   
   public:
     Employee(); // Constructor
     virtual void setDetails(); // make the user enter the data
     virtual void getDetails(); // display employee data to user
-    virtual void getSalary();
-    // double calculatePay();
+    virtual double getSalary();
+    virtual double calculatePay( double salary );
 
 };
 

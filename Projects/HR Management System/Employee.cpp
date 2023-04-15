@@ -16,7 +16,9 @@ int Employee::employeeID = 0;
 
 void Employee::setDetails()
 {
-  cout << "Name : "; cin >> name;
+  cout << "Name : "; 
+  std::getline(cin, name);
+
   cout << "Phone : "; cin >> phone;
   cout << "Email : "; cin >> email;
   cout << "Job Title : "; cin >> jobTitle;
@@ -30,6 +32,6 @@ void Employee::getDetails()
   cout << "Job Title : " << jobTitle << endl;
 }
 
-void Employee::getSalary() {}
+double Employee::getSalary() { return salary; }
 
-// double Employee::calculatePay() {}
+double Employee::calculatePay( double salary ) { return salary; }

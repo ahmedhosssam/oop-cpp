@@ -8,10 +8,7 @@ using namespace std;
 
 SalariedEmployee::SalariedEmployee() {}
 
-void SalariedEmployee::getSalary()
-{
-  cout << "Salary : $" << salary << endl;
-}
+double SalariedEmployee::getSalary() { return salary; }
 
 void SalariedEmployee::getDetails()
 {

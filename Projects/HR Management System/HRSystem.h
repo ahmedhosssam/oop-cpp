@@ -18,7 +18,7 @@ class HRSystem
     void addEmployee();
     void editEmployee();
     void delEmployee();
-    void FineEmployee();
+    void FindEmployee();
     void ShowAll();
 };
 

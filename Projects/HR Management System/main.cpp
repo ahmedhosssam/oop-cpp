@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+// classes
 #include "Employee.h"
 #include "HRSystem.h"
 #include "HourlyEmployee.h"
@@ -11,7 +12,7 @@ using namespace std;
 
 int main()
 {
-  Employee* ahmed = new SalariedEmployee;
+  Employee* ahmed = new HourlyEmployee;
   ahmed->setDetails();
   ahmed->getDetails();
 

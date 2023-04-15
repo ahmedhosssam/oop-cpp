@@ -16,10 +16,11 @@ class HourlyEmployee : public Employee
 
   public:
     HourlyEmployee();
-    void addHours ( int moreHours );
-    void getSalary();
-    void setDetails() ;
-    void getDetails() ;
+    void addHours ( double moreHours );
+    double getSalary();
+    void setDetails();
+    void getDetails();
+    void calculatePay();
 };
 
 #endif
