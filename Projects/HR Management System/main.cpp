@@ -12,7 +12,6 @@ using namespace std;
 
 int main()
 {
-
   HRSystem hr1;
 
   return 0;
