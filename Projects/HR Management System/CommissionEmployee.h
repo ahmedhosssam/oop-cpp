@@ -9,8 +9,10 @@
 class CommissionEmployee : public Employee
 {
   public:
+    CommissionEmployee();
     double target;
-    double rate;
+    double salary;
+    void setDetails();
     double getSalary();
     void getDetails(); 
 };

@@ -7,6 +7,7 @@
 #include "Employee.h"
 #include "HourlyEmployee.h"
 #include "SalariedEmployee.h"
+#include "CommissionEmployee.h"
 
 using namespace std;
 
@@ -33,6 +34,7 @@ void HRSystem::getOptions()
       if (countEmployees == 0 )
       {
       cout << "Welcome Mr." << hrName << " !\n";
+      cout << "<----------------------------->\n";
       }
 
       cout << "Choose one of the following options : \n";
@@ -68,7 +70,7 @@ void HRSystem::addEmployee()
   int option;
 
   cout << "Choose the type of the Employee : \n\n";
-  cout << "1: Hourly Employee\n2: Salaried Employee\n";
+  cout << "1: Hourly Employee\n2: Salaried Employee\n3: Commission Employee\n";
   cin >> option;
 
   switch (option)
@@ -79,6 +81,9 @@ void HRSystem::addEmployee()
     break;
   case 2:
     EmployeeList[countEmployees] = new SalariedEmployee;
+    countEmployees++;
+  case 3:
+    EmployeeList[countEmployees] = new CommissionEmployee;
     countEmployees++;
 
   default:
