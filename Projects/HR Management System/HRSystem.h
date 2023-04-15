@@ -19,6 +19,7 @@ class HRSystem
     static int countEmployees; // to count how many employees are there
     HRSystem(); //Constructor
     ~HRSystem(); //Deconstructor
+    void clearScreen();
     void getOptions();
     void addEmployee();
     void CalcTotalPayroll();
@@ -26,7 +27,6 @@ class HRSystem
     void editEmployee();
     void delEmployee();
     void FindEmployee();
-    void clearScreen();
 };
 
 #endif
