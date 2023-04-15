@@ -13,13 +13,14 @@ class HRSystem
   protected:
     Employee* EmployeeList[35];
     string hrName;
+    double totalPayroll;
 
   public:
     static int countEmployees; // to count how many employees are there
     HRSystem(); //Constructor
     ~HRSystem(); //Deconstructor
-    void CalcTotalPayroll();
     void addEmployee();
+    void CalcTotalPayroll();
     void editEmployee();
     void delEmployee();
     void FindEmployee();
