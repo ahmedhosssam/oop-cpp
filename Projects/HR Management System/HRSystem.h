@@ -25,7 +25,7 @@ class HRSystem
     void CalcTotalPayroll();
     void ShowAll();
     void editEmployee();
-    void delEmployee();
+    void deleteEmployee();
     void FindEmployee();
 };
 

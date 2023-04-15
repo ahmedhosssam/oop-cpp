@@ -19,6 +19,8 @@ HRSystem::HRSystem()
   cout << "Enter Your name : "; 
   std::getline(cin, hrName);
 
+  clearScreen();
+  cout << "Welcome Mr." << hrName << " !\n\n";
   getOptions();
 }
 
@@ -31,19 +33,12 @@ void HRSystem::getOptions()
 {
   while(countEmployees <= 35)
     {
-      if (countEmployees == 0 )
-      {
-      cout << "Welcome Mr." << hrName << " !\n";
-      cout << "<----------------------------->\n";
-      }
-
-      cout << "Choose one of the following options : \n";
+      cout << "Choose one of the following options : \n\n";
       cout << "1: Add a new employee\n";
       cout << "2: Display all employees\n";
       cout << "3: Edit Employee\n";
       cout << "4: Delete Employee\n";
-      cout << "5: Find an Employee\n";
-      cout << "6: Display Payroll\n";
+      cout << "5: Display Payroll\n";
 
       int option;
       cout << "==> "; cin >> option;
@@ -55,7 +50,13 @@ void HRSystem::getOptions()
         case 2:
           ShowAll();
           break; 
-        case 6:
+        case 3:
+          editEmployee();
+          break;
+        case 4:
+          deleteEmployee();
+          break;
+        case 5:
           CalcTotalPayroll();
           break;
         default:
@@ -82,9 +83,11 @@ void HRSystem::addEmployee()
   case 2:
     EmployeeList[countEmployees] = new SalariedEmployee;
     countEmployees++;
+    break;
   case 3:
     EmployeeList[countEmployees] = new CommissionEmployee;
     countEmployees++;
+    break;
 
   default:
     break;
@@ -117,10 +120,66 @@ void HRSystem::CalcTotalPayroll()
 void HRSystem::ShowAll()
 {
   clearScreen();
+
+  if ( countEmployees == 0 ) { cout << "There are no employees yet.\n"; }
+
   for(int i = 0 ; i < countEmployees ; i++)
   {
     EmployeeList[i]->getDetails();
     cout << "\n";
   }
   cout << "<------------------------>\n";
+}
+
+void HRSystem::editEmployee()
+{
+  int option;
+
+  if ( countEmployees == 0 )
+  {
+    cout << "There are no employees to edit.\n";
+    std::this_thread::sleep_for(std::chrono::seconds(2)); // wait for 2 seconds
+    clearScreen();
+    return;  
+  }
+
+  clearScreen();
+  cout << "Enter the Employee's ID : "; cin >> option;
+
+  EmployeeList[option]->setDetails();
+  
+  cout << "\nDONE !\n";
+  std::this_thread::sleep_for(std::chrono::seconds(1)); // wait for 1 seconds
+  clearScreen();
+}
+
+void HRSystem::deleteEmployee()
+{
+
+  if ( countEmployees == 0 )
+    {
+      cout << "There are no employees to delete.\n";
+      std::this_thread::sleep_for(std::chrono::seconds(2)); // wait for 2 seconds
+      clearScreen();
+      return;  
+    }
+
+  clearScreen();
+  int deleteID;
+  cout << "Enter the Employee's ID : "; cin >> deleteID;
+
+  if ( deleteID > countEmployees )
+  {
+    cout << "this ID doesn't exist\n";
+    std::this_thread::sleep_for(std::chrono::seconds(2)); // wait for 2 seconds
+    deleteEmployee();
+  }
+
+  int j = 0;
+  for( int i = deleteID ; i < countEmployees ; i++ )
+  {
+    EmployeeList[i] = EmployeeList[i+1];
+  }
+
+  countEmployees--;
 }

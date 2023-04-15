@@ -9,12 +9,12 @@ using namespace std;
 class Employee
 {
   protected:
-    static int employeeID;
     string name;
     string phone;
     string email;
     string jobTitle;
     double salary;
+    int employeeID;
   
   public:
     Employee(); // Constructor

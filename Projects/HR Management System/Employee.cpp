@@ -3,16 +3,15 @@
 
 #include "Employee.h"
 #include "HourlyEmployee.h"
+#include "HRSystem.h"
 
 using namespace std;
 
 Employee::Employee ()
 {
-  cout << "ID : " << employeeID << endl;
-  Employee::employeeID++;
+  employeeID = HRSystem::countEmployees;
 }
 
-int Employee::employeeID = 0;
 
 void Employee::setDetails()
 {
@@ -26,6 +25,7 @@ void Employee::setDetails()
 
 void Employee::getDetails()
 {
+  cout << "ID : " << employeeID << endl;
   cout << "Name : " << name << endl;
   cout << "Phone : " << phone << endl;
   cout << "Email : " << email << endl;
