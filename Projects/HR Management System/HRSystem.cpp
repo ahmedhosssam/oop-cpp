@@ -141,12 +141,18 @@ void HRSystem::editEmployee()
     clearScreen();
     return;  
   }
-
   clearScreen();
-  cout << "Enter the Employee's ID : "; cin >> option;
 
+  cout << "Enter the Employee's ID : "; cin >> option;
+  if ( option > countEmployees - 1 || option < 0 )
+  {
+    cout << "Invalid ID .. please enter an ID between 0 and " << countEmployees << endl;
+    std::this_thread::sleep_for(std::chrono::seconds(3)); // wait for 2 seconds
+    clearScreen();
+    editEmployee(); // recursion , I don't know if this the write choice or not
+  }
   EmployeeList[option]->setDetails();
-  
+
   cout << "\nDONE !\n";
   std::this_thread::sleep_for(std::chrono::seconds(1)); // wait for 1 seconds
   clearScreen();
@@ -154,7 +160,6 @@ void HRSystem::editEmployee()
 
 void HRSystem::deleteEmployee()
 {
-
   if ( countEmployees == 0 )
     {
       cout << "There are no employees to delete.\n";
@@ -178,7 +183,6 @@ void HRSystem::deleteEmployee()
   {
     EmployeeList[i] = EmployeeList[i+1];
   }
-
   countEmployees--;
 
   cout << "\nDONE !\n";
