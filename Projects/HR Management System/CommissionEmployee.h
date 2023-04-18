@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-
 #include "Employee.h"
 
 class CommissionEmployee : public Employee

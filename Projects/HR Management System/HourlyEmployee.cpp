@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 #include "HourlyEmployee.h"
 #include "Employee.h"
 
