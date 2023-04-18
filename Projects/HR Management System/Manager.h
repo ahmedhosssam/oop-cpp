@@ -11,7 +11,7 @@ class Manager : public Employee
     double bonus;
   
   public:
-    void addBonus(double moreBonus);
+    Manager();  // constructor
     void setDetails();
     void getDetails();
     double getSalary();
