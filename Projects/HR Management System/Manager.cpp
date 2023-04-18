@@ -6,7 +6,7 @@
 
 Manager::Manager()
 {
-
+  Manager::setDetails();
 }
 
 void Manager::setDetails()
@@ -22,5 +22,5 @@ void Manager::getDetails()
   cout << "Salary : $" << salary << endl;
 }
 
-void Manager::getSalary() { return salary; }
+double Manager::getSalary() { return salary; }
 

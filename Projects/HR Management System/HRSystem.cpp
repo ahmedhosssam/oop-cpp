@@ -71,10 +71,7 @@ void HRSystem::addEmployee()
   int option;
 
   cout << "Choose the type of the Employee : \n\n";
-  cout << "1: Hourly Employee\n
-           2: Salaried Employee\n
-           3: Commission Employee\n
-           4: Manager Employee\n";
+  cout << "1: Hourly Employee\n2: Salaried Employee\n3: Commission Employee\n4: Manager Employee\n";
   cin >> option;
 
   switch (option)
