@@ -9,14 +9,15 @@ using namespace std;
 class Product {
   private:
     int id;
-    string number;
     string name;
     double price;
-    int type;
 
   public:
+    Product();
+    Product(string name, double price, int id);
     void update();
-
+    void getDetails();
+    void setDetails();
 };
 
 #endif

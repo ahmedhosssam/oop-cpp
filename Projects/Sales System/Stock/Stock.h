@@ -3,17 +3,23 @@
 
 #include <iostream>
 #include <string>
+#include "../Product/Product.h"
+using namespace std;
 
 class Stock {
   private:
     int id;
-    int count;
+    Product productList[50];
+    static int count;
 
   public:
-    void addProduct(int product_id, int quantity);
-    void updateProduct(int product_id, int quantity);
-    void deleteProduct(int product_id);
-    int getQuantity(int product_id);
+    Stock();
+    int getQuantity();
+    void addProduct();
+    void updateProduct();
+    void deleteProduct();
+    void showAllProducts();
+    void clearScreen();
 };
 
 #endif
