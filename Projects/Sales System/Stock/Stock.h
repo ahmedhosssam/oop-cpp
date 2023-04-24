@@ -10,8 +10,8 @@ class Stock {
     int count;
 
   public:
-    void addStock(int product_id, int quantity);
-    void updateStock(int product_id, int quantity);
+    void addProduct(int product_id, int quantity);
+    void updateProduct(int product_id, int quantity);
     void deleteProduct(int product_id);
     int getQuantity(int product_id);
 };
