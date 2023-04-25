@@ -35,7 +35,7 @@ void Stock::updateProduct() {
 
 int Stock::getQuantity() 
 {
-  return 5;
+  return count;
 }
 
 void Stock::showAllProducts()
@@ -47,7 +47,16 @@ void Stock::showAllProducts()
   }
 }
 
-void Stock::deleteProduct() {}
+void Stock::deleteProduct() {
+  clearScreen();
+  int option;
+  cout << "Enter the ID of the product : "; cin >> option;
+
+  for(int i = option ; i < count-1 ; i++) {
+    productList[i] = productList[i+1];
+  }
+  count--;
+}
 
 void Stock::clearScreen()
 {

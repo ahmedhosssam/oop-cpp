@@ -12,9 +12,8 @@ int main()
 	do
 	{
 		int option;
-		cout << "Hello!!\n\n";
 		cout << "Choose one of the following options :\n";
-		cout << "1 : Show all products\n2 : Add a new product\n3: Update product\n";
+		cout << "1 : Show all products\n2 : Add a new Product\n3: Update Product\n4: Delete Product\n";
 		cout << "==> "; cin >> option;
 
 		switch (option)
@@ -27,9 +26,12 @@ int main()
 			break;	
 		case 3:
 			s1.updateProduct();
+			break;
+		case 4:
+			s1.deleteProduct();
+			break;
 		default:
 			break;
-
 		}
 		countdown--;
 	} while (countdown > 0);
