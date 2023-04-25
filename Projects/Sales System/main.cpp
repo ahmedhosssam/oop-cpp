@@ -35,7 +35,6 @@ int main()
 		}
 		countdown--;
 	} while (countdown > 0);
-	
 
 	return 0;
 }
