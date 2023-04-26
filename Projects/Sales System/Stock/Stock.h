@@ -9,7 +9,7 @@ using namespace std;
 class Stock {
   private:
     int id;
-    Product productList[50];
+    Product productList[100];
     static int count;
 
   public:

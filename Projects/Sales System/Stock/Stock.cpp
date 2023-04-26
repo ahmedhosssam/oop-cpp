@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib> // for system() function
-#include <chrono> // for sleep() function
-#include <thread> // for sleep() function
 
 #include "Stock.h"
 #include "../Product/Product.h"
