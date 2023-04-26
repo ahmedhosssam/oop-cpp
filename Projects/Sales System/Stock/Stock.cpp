@@ -41,10 +41,12 @@ int Stock::getQuantity()
 void Stock::showAllProducts()
 {
   clearScreen();
+  if(count == 0) { cout << "There is no products...\n"; }
   for(int i = 0 ; i < count ; i++) {
     productList[i].getDetails();
     cout << "<------>\n";
   }
+  cout << "<----------------->\n";
 }
 
 void Stock::deleteProduct() {

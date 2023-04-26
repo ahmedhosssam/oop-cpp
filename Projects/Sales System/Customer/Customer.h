@@ -11,8 +11,8 @@ class Customer {
     string phone;
   public:
     Customer();
-    void getDetails();
-    void setDetails();
+    virtual void getDetails();
+    virtual void setDetails();
 };
 
 #endif

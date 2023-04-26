@@ -4,7 +4,8 @@
 #include "Customer.h"
 using namespace std;
 
-Customer::Customer() {}
+Customer::Customer() {
+}
 
 void Customer::setDetails() {
   cout << "Phone Number : "; cin >> phone;
