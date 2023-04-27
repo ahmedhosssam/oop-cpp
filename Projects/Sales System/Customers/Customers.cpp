@@ -37,9 +37,12 @@ void Customers::addCustomer() {
 
 void Customers::editCutomer() {
   clearScreen();
-  if(countCustomers == 0) { cout << "There is no customers...\n"; }
+  if(countCustomers == 0)
+  {
+    cout << "There is no customers...\n";
+    return;
+  }
   cout << "<----------------->\n";
-  return;
   int option;
   cout << "Enter Id : "; cin >> option;
   customerList[option]->setDetails();

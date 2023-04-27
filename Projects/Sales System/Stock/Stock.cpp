@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib> // for system() function
-
 #include "Stock.h"
 #include "../Product/Product.h"
 using namespace std;
